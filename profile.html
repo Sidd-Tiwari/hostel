@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <title>Profile</title>
+    
+</head>
+<body>
+    <div class="profile">
+        <h1>User Profile</h1>
+        <div class="column sidemenubar">
+            <div class="sidenav">
+                <ul>
+                    <li><a href="/dashboard.html">Dashboard</a></li>
+                    <li><a href="/profile.html">Profile</a></li>
+                    <li><a href="/timetable.html">Food Timetable</a></li>
+                    <li><a href="/attendence.html">Attendance</a></li>
+
+                    <li><a href="/room.html">Room Tour</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <li><a href="/login.html">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+        <form id="profile-form">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="Enter your username"><br>
+            <label for="email">Email : </label><br>
+
+            <input type="email" name="email" id="eee" placeholder="Enter your email"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <div id="profile-info" style="display: none;">
+            <p><strong>Username:</strong> <span id="username-display"></span></p>
+            <p><strong>Email:</strong> <span id="email-display"></span></p>
+            <p><strong>Account Type:</strong> Premium</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("profile-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            var username = document.getElementById("username").value;
+            var username = document.getElementById("eee").value;
+            if (username && email) {
+                document.getElementById("username-display").textContent = username;
+                document.getElementById("email-display").textContent = email;
+
+                document.getElementById("profile-info").style.display = "block";
+            } else {
+                alert("Please enter a username.");
+            }
+        });
+    </script>
+</body>
+</html>
